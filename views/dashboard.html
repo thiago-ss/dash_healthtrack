@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/all.css">
+		<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+		<title>Health Track</title>
+	</head>
+	<body>
+		<div class="flex-dashboard">
+			<sidebar id="sidebar">
+				<div class="sidebar-title">
+					<img src="../images/ex003/Health_Track_wm-removebg-preview.png" alt="">
+					<h2>Health Track</h2>
+				</div>
+				<div class="menu">
+					<ul>
+						<li class="selected">
+							<i class="fa-solid fa-house-user"> </i>
+							<a href="dashboard.html"> Dashboard</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-user"></i>
+							<a href="perfil.html"> Perfil</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-scale-unbalanced"></i>
+							<a href="weight.html"> Gerenciar peso e altura</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-heart-pulse"></i>
+							<a href="pressure.html"> Gerenciar pressão arterial</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-person-skating"></i>
+							<a href="activity.html"> Gerenciar atividades físicas</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-utensils"></i>
+							<a href="food.html"> Gerenciar alimentos</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-calculator"></i>
+							<a href="imc.html"> Calcular IMC</a>
+						</li>
+						<li class="sidebar_logout">
+							<i class="fa-solid fa-right-from-bracket"> </i>
+							<a href="../index.html"> Logout</a>
+						</li>
+					</ul>
+				</div>
+			</sidebar>
+			<main id="mainContent">
+				<header>
+					<i class="fas fa-bars" id="iconMenu" onclick="responsiveSidebar()"></i>
+					<a href="../index.html"> <i class="fa-solid fa-right-from-bracket"> </i> Logout</a>
+				</header>
+				<div class="main-content">
+					<div class="main-content-title">
+						<h2>DASHBOARD</h2>
+					</div>
+					<div class="dashboard-content">
+						<div class="dashboard-flex-parent">
+							
+							<div class="dashboard-box">
+								<div class="box-icon box-weight">
+									<i class="fa-solid fa-scale-unbalanced"></i>
+								</div>
+								<div class="value">80kg</div>
+								<div class="type">Peso</div>
+								<div class="box-value-percentual box-value-weight">
+									<i class="fa-solid fa-angle-up"></i>
+									10%
+								</div>
+							</div>
+
+							<div class="dashboard-box">
+								<div class="box-icon box-pressure">
+									<i class="fa-solid fa-heart-pulse"></i>
+								</div>
+								<div class="value">23mmHg</div>
+								<div class="type">Pressão arterial</div>
+								<div class="box-value-percentual box-value-pressure">
+									<i class="fa-solid fa-angle-up"></i>
+									<span>10%</span>
+								</div>
+							</div>
+
+							<div class="dashboard-box">
+								<div class="box-icon box-imc">
+									<i class="fa-solid fa-calculator"></i>
+								</div>
+								<div class="value">23,2</div>
+									<div class="type">IMC</div>
+									<div class="box-value-percentual box-value-imc">
+										<span>NORMAL</span>
+									</div>
+							</div>
+
+							<div class="dashboard-box">
+								<div class="box-icon box-activity">
+									<i class="fa-solid fa-person-skating"></i>
+								</div>
+								<div class="value">Bicicleta</div>
+								<div class="type">Atividade física</div>
+								<div class="box-value-percentual box-value-activity">
+									<i class="fa-solid fa-alarm-exclamation"></i>
+									<span>24/08/2021</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../plugins/fontawesome/js/all.min.js"></script>
+		<script src="../js/menu.js"></script>
+	</body>
+</html>

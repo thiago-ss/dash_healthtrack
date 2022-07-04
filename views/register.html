@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+	<title>Health Track</title>
+</head>
+
+<body>
+	<div class="register-parent">
+		<div class="register">
+			<div class="register-title">
+				<img src="../images/ex003/Health_Track_wm-removebg-preview.png" alt="">
+				<h2>Health Track</h2>
+			</div>
+			<form id="form">
+				<div class="form-group">
+					<label for="Nome">Nome completo</label>
+					<input type="text" class="form-control" id="Nome">
+				</div>
+				<div class="form-group">
+					<label for="Idade">Idade</label>
+					<input type="number" class="form-control" id="Idade">
+				</div>
+				<div class="form-group">
+					<label for="Genero" id="genre-select">Gênero</label>
+					<input type="text" class="form-control" id="Genero">
+				</div>
+				<div class="form-group">
+					<label for="Email">Email</label>
+					<input type="email" class="form-control" id="Email">
+				</div>
+				<div class="form-group">
+					<label for="Senha">Senha</label>
+					<input type="password" class="form-control" id="Senha">
+				</div>
+				<button type="submit" id="registerBtn" class="btn" >Cadastrar</button>
+			</form>
+			<div class="login-register">
+				<span>Já possui uma conta? <a href="../index.html">Faça Log In</a></span>
+			</div>
+		</div>
+	</div>
+	<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../plugins/fontawesome/js/all.min.js"></script>
+	<script src="../plugins/sweetalert/dist/sweetalert2.all.min.js"></script>
+	<script type="module" src="../js/user/registerUser.js"></script>
+	<script>
+		let form = document.getElementById('form');
+
+		form.addEventListener('submit', e => {
+			e.preventDefault();
+			form.reset();
+		});
+	</script>
+</body>
+
+</html>

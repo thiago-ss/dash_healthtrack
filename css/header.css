@@ -1,0 +1,34 @@
+.flex-dashboard header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background-color: white;
+    padding: 10px 30px;
+    background: linear-gradient(160deg, #365b6d, #0d232e);
+    text-decoration: none;
+}
+
+.flex-dashboard header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.flex-dashboard header svg {
+    color: #fff;
+}
+
+.flex-dashboard .fa-bars {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-dashboard header a {
+        display: none;
+    }
+    .flex-dashboard header {
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/all.css">
+		<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="../plugins/sweetalert/dist/sweetalert2.min.css">
+		<title>Health Track</title>
+	</head>
+	<body>
+		<div class="flex-dashboard">
+			<sidebar>
+				<div class="sidebar-title">
+					<img src="../images/ex003/Health_Track_wm-removebg-preview.png" alt="">
+					<h2>Health Track</h2>
+				</div>
+				<div class="menu">
+					<ul>
+						<li>
+							<i class="fa-solid fa-house-user"> </i>
+							<a href="dashboard.html"> Dashboard</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-user"></i>
+							<a href="perfil.html"> Perfil</a>
+						</li>
+						<li class="selected">
+							<i class="fa-solid fa-scale-unbalanced"></i>
+							<a href="weight.html"> Gerenciar peso e altura</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-heart-pulse"></i>
+							<a href="pressure.html"> Gerenciar pressão arterial</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-person-skating"></i>
+							<a href="activity.html"> Gerenciar atividades físicas</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-utensils"></i>
+							<a href="food.html"> Gerenciar alimentos</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-calculator"></i>
+							<a href="imc.html"> Calcular IMC</a>
+						</li>
+					</ul>
+				</div>
+			</sidebar>
+			<main>
+				<header>
+					<a href="dashboard.html"> <i class="fa-solid fa-house-user"> </i> Dashboard</a>
+					<a href="../index.html"> <i class="fa-solid fa-right-from-bracket"> </i>
+						Logout</a>
+				</header>
+				<div class="main-content">
+					<div class="main-content-title">
+						<h2>Gerenciar peso e altura</h2>
+					</div>
+					<div class="panel-row">
+						<button id="registerButton" class="panel panel-50">
+							<i class="fa-solid fa-plus"></i>
+							Cadastrar peso e altura
+						</button>
+						<button id="viewButton" class="panel panel-50">
+							<i class="fa-solid fa-table"></i>
+							Visualizar peso e altura
+						</button>
+					</div>
+					<section class="registerWeight invisiblee">
+
+						<form id="peso-form">
+							<div class="mb-3">
+								<label for="Peso" class="form-label">Novo peso</label>
+								<input type="number" name="Peso" class="form-control" id="Peso">
+							</div>
+							<button type="submit" class="btn" id="registerWeightBtn" style="margin-bottom: 50px">Cadastrar</button>
+						</form>
+						
+						<form id="altura-form">
+							<div class="mb-3">
+								<label for="Altura" class="form-label">Nova altura</label>
+								<input type="number" name="Altura" class="form-control" id="Altura">
+							</div>
+							<button type="submit" class="btn" id="registerHeightBtn">Cadastrar</button>
+						</form>
+						
+					</section>
+	
+					<section class="viewWeight invisiblee">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Data</th>
+									<th scope="col">Peso</th>
+									<th scope="col">Altura</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">03/07/2022</th>
+									<td>82kg</td>
+									<td>180cm</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</main>
+		</div>
+		<script src="../plugins/sweetalert/dist/sweetalert2.all.min.js"></script>
+		<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../plugins/fontawesome/js/all.min.js"></script>
+		<script type="module" src="../js/weight/registerWeight.js"></script>
+		<script type="module" src="../js/height/registerHeight.js"></script>
+		<script type="module" src="../js/weight/getWeight.js"></script>
+		<script>
+			// prevent default 
+			let formPeso = document.getElementById('peso-form')
+			let formAltura = document.getElementById('altura-form')
+			
+			let registerWeight = document.querySelector('.registerWeight');
+			let viewWeight = document.querySelector('.viewWeight');
+
+			let registerBtn = document.querySelector('#registerButton')
+			let viewBtn = document.querySelector('#viewButton');
+
+			registerBtn.addEventListener('click', () => {
+				registerWeight.classList.remove('invisiblee')
+				viewWeight.classList.add('invisiblee')
+			})
+
+			viewBtn.addEventListener('click', () => {
+				viewWeight.classList.remove('invisiblee')
+				registerWeight.classList.add('invisiblee')
+			})	
+
+
+			formPeso.addEventListener('submit', (e) => {
+				e.preventDefault();
+				formPeso.reset();
+			})
+
+			formAltura.addEventListener('submit', (e) => {
+				e.preventDefault();
+				formAltura.reset();
+			})
+			
+			// switch section view
+		</script>
+	</body>
+</html>

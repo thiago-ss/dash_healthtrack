@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
+	<title>Health Track</title>
+</head>
+
+<body>
+	<div class="flex-dashboard">
+		<sidebar id="sidebar">
+			<div class="sidebar-title">
+				<img src="../images/ex003/Health_Track_wm-removebg-preview.png" alt="">
+				<h2>Health Track</h2>
+			</div>
+			<div class="menu">
+				<ul>
+					<li>
+						<i class="fa-solid fa-house-user"> </i>
+						<a href="dashboard.html"> Dashboard</a>
+					</li>
+					<li class="selected">
+						<i class="fa-solid fa-user"></i>
+						<a href="perfil.html"> Perfil</a>
+					</li>
+					<li>
+						<i class="fa-solid fa-scale-unbalanced"></i>
+						<a href="weight.html"> Gerenciar peso e altura</a>
+					</li>
+					<li>
+						<i class="fa-solid fa-heart-pulse"></i>
+						<a href="pressure.html"> Gerenciar pressão arterial</a>
+					</li>
+					<li>
+						<i class="fa-solid fa-person-skating"></i>
+						<a href="activity.html"> Gerenciar atividades
+							físicas</a>
+					</li>
+					<li>
+						<i class="fa-solid fa-utensils"></i>
+						<a href="food.html"> Gerenciar alimentos</a>
+					</li>
+					<li>
+						<i class="fa-solid fa-calculator"></i>
+						<a href="imc.html"> Calcular IMC</a>
+					</li>
+					<li class="sidebar_logout">
+						<i class="fa-solid fa-right-from-bracket"> </i>
+						<a href="../index.html"> Logout</a>
+					</li>
+				</ul>
+			</div>
+		</sidebar>
+		<main id="mainContent">
+			<header>
+				<i class="fas fa-bars" id="iconMenu"></i>
+				<a href="../index.html"> <i class="fa-solid
+                            fa-right-from-bracket"> </i> Logout</a>
+			</header>
+			<div class="main-content">
+				<div class="main-content-title">
+					<h2>Perfil</h2>
+				</div>
+				<div class="perfil-parent">
+					<div class="perfil">
+						<div class="perfil-form">
+							<form id="form-perfil">
+								<div class="mb-3">
+									<label for="Nome" class="form-label">Nome
+										completo</label>
+									<input type="text" class="form-control" name="Nome" id="Nome" placeholder="Nome
+                                            completo">
+								</div>
+								<div class="mb-3">
+									<label for="Email" class="form-label">Email</label>
+									<input type="Email" class="form-control" name="Email" id="Email" placeholder="Email">
+								</div>
+								<div class="mb-3">
+									<label for="Idade" class="form-label">Idade</label>
+									<input type="text" class="form-control" name="Idade" id="Idade" placeholder="Idade">
+								</div>
+								<div class="mb-3">
+									<label for="Genero" class="genre-title">Gênero</label>
+									<input type="text" class="form-control" name="Genero" id="Genero">
+								</div>
+								<div class="mb-3">
+									<label for="Senha" class="form-label">Senha</label>
+									<input type="password" name="Senha" class="form-control" id="Senha" placeholder="Senha">
+								</div>
+								<button type="submit" class="btn" id="updateBtn">Salvar</button>
+								<button type="submit" class="btn" id="deleteBtn">Deletar</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="../plugins/sweetalert/dist/sweetalert2.all.min.js"></script>
+	<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../plugins/fontawesome/js/all.min.js"></script>
+	<script type="module" src="../js/user/deleteUser.js"></script>
+	<script type="module" src="../js/user/updateUser.js"></script>
+	<script>
+		let form = document.getElementById('form-perfil');
+
+		form.addEventListener('submit', e => {
+			e.preventDefault();
+			form.reset();
+		})
+	</script>
+</body>
+
+</html>

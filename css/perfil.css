@@ -1,0 +1,93 @@
+div.perfil-parent {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.perfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  padding: 40px 20px;
+  width: 100%;
+  background-color: white;
+}
+
+div.perfil-img {
+  width: 40%;
+}
+
+div.perfil-form {
+  padding-left: 20px;
+  width: 60%;
+}
+
+.genre-title {
+  margin-bottom: 8px;
+}
+
+div.perfil-form button {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #0d435c, #289dd2);
+  color: #fff;
+  border: none;
+}
+
+div.perfil-form button:hover {
+  border: none;
+  color: #fff;
+  transform: scale(1.10);
+  transition: .2s;
+}
+
+div.perfil-form input, div.perfil-form select {
+  font-size: 14px;
+}
+
+div.perfil-form label {
+  font-size: 14px;
+}
+
+div.img {
+  height: 470px;
+  width: 340px;
+  margin-left: 15px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid rgba(13, 67, 92, 0.6);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {  
+  div.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 40px 20px;
+    width: 100%;
+    background-color: white;
+  }
+
+  div.perfil-img {
+    width: 100%;
+  }
+  
+  div.img {
+    height: 470px;
+    width: 340px;
+    margin-left: 15px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid rgba(13, 67, 92, 0.6);
+    border-radius: 5px;
+  }
+}

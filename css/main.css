@@ -1,0 +1,282 @@
+main {
+    display: block;
+    height: 100%;
+    background-color: #f5f5f5;
+    width: calc(100% - 300px); /* sidebar = 300px -> dashboard = 100% - sidebar */
+}
+
+main .main-content {
+    padding: 30px;
+    width: 100%;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.main-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, #365b6d),
+									   color-stop(0.72, #286685));
+}
+
+.main-content .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.panel-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.panel-50 {
+    width: 48%;
+}
+
+.panel-row button {
+    height: 150px;
+    background: linear-gradient(135deg, #0d435c, #289dd2);
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+}
+
+.panel-row button svg {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.panel-row button:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.registerWeight, .registerPressure, .registerActivity, .registerFood {
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+.registerWeight button, .registerPressure button, .registerActivity button, .registerFood button {
+    background: linear-gradient(135deg, #0d435c, #289dd2);
+    border: none;
+    padding: 8px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.registerWeight button:hover, .registerPressure button:hover, .registerActivity button:hover, .registerFood button:hover {
+    transform: scale(1.05);
+    transition: .2s;
+    color: #fff;
+}
+
+.viewWeight table svg, .viewPressure table svg, .viewActivity table svg, .viewFood table svg {
+    cursor: pointer;
+}
+
+.registerWeight, .registerPressure, .registerActivity, .registerFood {
+    padding: 20px;
+}
+div.main-content-title {
+    padding: 5px 0;
+}
+
+div.main-content-title h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+div.imc-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+div.imc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    padding: 40px 20px;
+    width: 100%;
+    background-color: white;
+}
+
+div.imc h2 {
+    font-weight: 300;
+}
+
+div.imc h2 span:nth-child(1) {
+    color: #0d435c;
+}
+
+div.imc h2 span:nth-child(2) {
+    color: #286685;
+    font-weight: bold;
+}
+
+div.dashboard-content {
+    padding: 10px 0;
+}
+
+.dashboard-flex-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dashboard-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    padding-top: 15%;
+    background-color: #e6eaec;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.dashboard-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem rgba(156, 156, 156, 1.5);
+    transition: .5s;
+}
+
+div.box-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+div.box-icon svg {
+    font-size: 18px;
+}
+
+div.value {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+div.type {
+    margin-top: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.box-weight {
+    background-color: rgba(110, 142, 251, 0.1);
+    color: #6283f5;
+}
+
+.box-pressure {
+    background-color: rgba(229, 115, 115, 0.1);
+    color: #ef5350;
+}
+
+.box-imc {
+    background-color: rgba(220, 231, 117, 0.4);
+    color: #afb42b;
+}
+
+.box-activity {
+    background-color: rgba(225, 138, 101, 0.1);
+    color: #ff5722;
+}
+
+.box-value-percentual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.box-value-percentual svg {
+    margin-right: 7px;
+}
+
+.box-value-weight {
+    color: #6283f5;
+}
+
+.box-value-pressure {
+    color: #ef5350;
+}
+
+.box-value-imc {
+    color: #afb42b;
+}
+
+.box-value-workout {
+    color: #ff5722;
+}
+
+.box-value-workout span{
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1200px) {
+    .dashboard-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+        padding-top: 20%;
+        background-color: #e6eaec;
+        border-radius: 15px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: block;
+        height: 100%;
+        background-color: #f5f5f5;
+        width: 100%; /* sidebar = 300px -> dashboard = 100% - sidebar */
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.invisiblee {
+    display: none;
+}
